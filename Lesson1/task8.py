@@ -8,7 +8,7 @@
 
 x = int(input('Введите координату X '))
 y = int(input('Введите координату Y '))
-def chetvert(x,y):
+def quarter_search(x,y):
     a = 4
     if x > 0 and y > 0:
         a = 1
@@ -18,4 +18,4 @@ def chetvert(x,y):
         a = 3
     print(f"Точка находится в {a} четверти плоскости")
 
-chetvert(x,y)
+quarter_search(x,y)

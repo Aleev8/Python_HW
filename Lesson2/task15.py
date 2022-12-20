@@ -3,3 +3,10 @@
 Пример:
 - пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4) """
 
+n = int(input('Введите число N: '))
+f = 1
+out_list = []
+for i in range(n):
+    f = (i + 1) * f
+    out_list.append(f)
+print(*out_list, sep=', ')

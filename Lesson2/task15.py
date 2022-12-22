@@ -6,7 +6,7 @@
 n = int(input('Введите число N: '))
 f = 1
 out_list = []
-for i in range(n):
-    f = (i + 1) * f
+for i in range(2, n + 2):
     out_list.append(f)
+    f *= i
 print(*out_list, sep=', ')

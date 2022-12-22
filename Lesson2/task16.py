@@ -14,7 +14,7 @@
 # print('Сумма чисел равна', round(sum, 2))
 
 n = int(input('Введите число: '))
-s = 0
+some_dict = {}
 for i in range (1, n + 1):
-    s += (1 + 1 / i) ** i
-print(round(s, 2))
+    some_dict[i] = (1 + 1 / i) ** i
+print(some_dict, round(sum(some_dict.values()), 2))

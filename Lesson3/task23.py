@@ -19,3 +19,11 @@ for i in range(middle_of_list):
     multiplier_list.append(test_list[i] * test_list[j])
     j -= 1
 print(test_list, '=>', multiplier_list)
+
+# Решение преподавателя
+
+# some_list = input().split()
+# new_list = []
+# for start in range(0, (len(some_list) - 1 ) // 2 + 1):
+#     new_list.append(int(some_list[start]) * int(some_list[len(some_list) - start - 1]))
+# print(new_list)

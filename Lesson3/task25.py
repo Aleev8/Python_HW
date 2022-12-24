@@ -13,3 +13,13 @@ while dec_num != 0:
     bin_num = str(dec_num % 2) + bin_num
     dec_num //=2
 print('Двоичное число = ', bin_num)
+
+# Лучше делать через списки, строки рабоатют дольше (пересоздаются в памяти)
+
+# n = int(input())
+# out_list = []
+# while n > 0:
+#     out_list.append(str(n % 2))
+#     n //= 2
+# out_list.reverse()
+# print(*out_list, sep='')

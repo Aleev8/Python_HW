@@ -14,3 +14,10 @@ for i in range(list_len):
         sum += test_list[i]
 print(test_list)
 print(sum)
+
+# Решение преподавателя
+# sum = 0
+# some_list = input().split()
+# for i in range(1, len(some_list), 2):
+#     sum += int(some_list[i])
+# print(sum)

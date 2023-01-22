@@ -8,15 +8,10 @@ friends = []
 for i in range(n):
     name = input('Введи имя друга: ')
     age = int(input('Введи возраст друга: '))
-    new_friend = {'name': name, 'age' : age}
-    friends.append(new_friend)
-min_age = friends[0]['age']
-count = 0
-for i in range(len(friends)):
-    if min_age > friends[i]['age']:
-        min_age = friends[i]['age']
-        count = i
-print(friends[count]['name'])
+    friends.append(dict(name=name, age=age))
+print(friends)
+min_age = min(friends, key=lambda x: x['age'])
+print('Младшего друга зовут - ', min_age['name'])
 
 
 

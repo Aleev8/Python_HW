@@ -25,13 +25,16 @@ for _ in range(N):
     age = int(input('Введи возраст друга: '))
     dict_list.append({'name': name, 'age': age})
 print(dict_list)
-summ = 0
-max_name = dict_list[0]['name']
-for i in dict_list:
-    summ += i['age']
-    if len(i['name']) > len(max_name):
-        max_name = i['name']
-print(summ / N)
-print(max_name)
-
+# summ = 0
+# max_name = dict_list[0]['name']
+# for i in dict_list:
+#     summ += i['age']
+#     if len(i['name']) > len(max_name):
+#         max_name = i['name']
+# print(summ / N)
+# print(max_name)
+# Еще вариант
+name_list = [i['name'] for i in dict_list]
+age_list = [i['age'] for i in dict_list]
+print(sum(age_list) / N)
 

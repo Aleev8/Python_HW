@@ -35,9 +35,11 @@ def check_win_draw(some_field):
     a1 = some_field[0][0]
     a2 = some_field[0][1]
     a3 = some_field[0][2]
+
     b1 = some_field[1][0]
     b2 = some_field[1][1]
     b3 = some_field[1][2]
+
     c1 = some_field[2][0]
     c2 = some_field[2][1]
     c3 = some_field[2][2]
@@ -61,30 +63,28 @@ def check_win_draw(some_field):
     elif field[0].count('-') == 0 and field[1].count('-') == 0 and field[2].count('-') == 0:
         return 'Ничья'
     else:
-        return None
-
-
+        return False
 
 field = [['-' for _ in range(3)] for _ in range(3)]
-print(field)
+print(*field, sep='\n')
 letter_number = {'a': 0, 'b': 1, 'c': 2}
 while True:
-    x = input('Введите номер клетки в формате "букву строки : номер столбца"')
+    x = input('Ходит Х. Введите номер клетки в формате "букву строки : номер столбца": ')
+    if field[letter_number[x[0]]][int(x[-1]) - 1] != '-':
+        print('Эта клетка уже занята')
+        continue
     field[letter_number[x[0]]][int(x[-1]) - 1] = 'X'
     if check_win_draw(field):
         print(check_win_draw(field))
         break
-    o = input('Введите номер клетки в формате "букву строки : номер столбца"')
-    field[letter_number[x[0]]][int(x[-1]) - 1] = 'O'
+    o = input('Ходит 0. Введите номер клетки в формате "букву строки : номер столбца": ')
+    while field[letter_number[o[0]]][int(o[-1]) - 1] != '-':
+        print('Эта клетка уже занята')
+        o = input('Ходит 0. Введите номер клетки в формате "букву строки : номер столбца": ')
+    field[letter_number[o[0]]][int(o[-1]) - 1] = '0'
     if check_win_draw(field):
         print(check_win_draw(field))
         break
-
-time 1:27:15
-
-
-
-
-
-
+    print(*field, sep='\n')
+    print('Играем дальше')
 

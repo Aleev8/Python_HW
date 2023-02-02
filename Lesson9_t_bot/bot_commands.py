@@ -11,7 +11,7 @@ async def hi_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     log(update, context)
-    await update.message.reply_text(f'/hi\n/time\n/help')
+    await update.message.reply_text(f'/hi\n/time\n/help\n/sum')
 
 
 async def time_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:

@@ -11,11 +11,9 @@
 import sympy
 import matplotlib.pyplot as plt
 import numpy as np
-from sympy import symbols
 from sympy import solveset
-from sympy.abc import x
 from sympy import sin, cos, pi
-import pylab
+
 
 
 x = sympy.symbols('x')
